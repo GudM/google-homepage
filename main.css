@@ -1,11 +1,20 @@
-* {
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
     font-size: 1.2vm;
     color: dimgrey;
 }
 
-header {
+.content {
+    min-height: 100%;
+}
+
+.content-inside {
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.header {
     display:block;
 }
 
@@ -29,14 +38,14 @@ ul li a:hover {
     text-decoration-line: underline;
 }
 
-img {
+.dot-menu {
     height: 24px;
     widows: 24px;
     position: relative;
     top: 8px;
 }
 
-img:hover {
+.dot-menu:hover {
     z-index: 2;
     background: url('https://img.icons8.com/ios-glyphs/24/000000/circled-menu.png');
 }
@@ -68,15 +77,15 @@ img:hover {
 }
 
 #logo {
+    margin-left: 360px;
     padding-top: 109px;
     height: 92px;
     width: 272px;
-    text-align: -webkit-center;
 }
 
 input {
     height: 50px;
-    width: 60%;
+    width: 40%;
     font-size: 15px;
     border-radius: 50px;
     border: 1px solid lightgrey;
@@ -99,7 +108,7 @@ input[type=search]:active, :hover, :focus {
 }
 
 .buttons {
-    display: block;
+    display: inline-block;
     text-align: center;
 }
 
@@ -139,4 +148,14 @@ input[type=search]:active, :hover, :focus {
 #lucky-btn:hover {
     opacity: 1;
     box-shadow: 2px 2px 5px lightgrey;
+}
+
+.footer {
+    display: inline-block;
+    height: 50px;
+    margin-top: -50px;
+}
+
+.fmenu {
+    display: inline-block;
 }
