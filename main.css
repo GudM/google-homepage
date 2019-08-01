@@ -1,161 +1,167 @@
+* {
+    box-sizing: border-box;
+    color: dimgray;
+    font-size: 16px;
+}
+
 html, body {
     height: 100%;
-    margin: 0;
-    font-size: 1.2vm;
-    color: dimgrey;
+    margin: 0 auto;
 }
 
-.content {
-    min-height: 100%;
+.menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    overflow: hidden;
 }
 
-.content-inside {
-    padding: 20px;
-    padding-bottom: 50px;
+.menu-list {
+    display: flex;
+    list-style: none;
+    margin: 0; 
 }
 
-.header {
-    display:block;
+.menu-list li {
+    display: block;
+    padding: 1.2em;
+    color: dimgray;
 }
 
-ul {
-    display: inline-block;
-    float: right;
-    text-align: -webkit-center;
-    list-style-type: none;
-}
-
-ul li {
-    display: inline-block;
-    margin: 15px;
-}
-
-ul li a {
+.menu-list li a {
     text-decoration: none;
 }
 
-ul li a:hover {
+.menu-list li a:hover {
     text-decoration-line: underline;
 }
 
-.dot-menu {
-    height: 24px;
-    widows: 24px;
-    position: relative;
-    top: 8px;
+.menu-list a img {
+    display: block;
+    margin-top: -3px;
 }
 
-.dot-menu:hover {
-    z-index: 2;
-    background: url('https://img.icons8.com/ios-glyphs/24/000000/circled-menu.png');
-}
-
-.enter {
+.menu-list li button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 100px;
+    margin-top: -8px;
+    background-color: dodgerblue;
     color: white;
-    border-radius: 3px;
-    padding: 8px 15px;
-    background-color: cornflowerblue;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
 }
 
-.enter:hover {
-    text-decoration-line: none;
-    background-image: linear-gradient(to right, mediumpurple 0%, cornflowerblue 40%, dodgerblue 100%);
+.menu-list li button:hover {
+    cursor: pointer;
+    background-color: skyblue;
 }
 
-.wrap {
+.main {
+    margin: 0 auto;
+    width: 80%;
+    height: 25%;
+    margin-top: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+
+main-logo img {
     display: block;
     margin: 0 auto;
-    min-width: 980px;
-    text-align: -webkit-center;
-}
-
-.icon  {
-    display: block;
-    height: 233px;
-    margin-top: 89px;
-    text-align: -webkit-center;
-}
-
-#logo {
-    margin-left: 360px;
-    padding-top: 109px;
-    height: 92px;
     width: 272px;
+    height: 92px;
 }
 
-input {
-    height: 50px;
-    width: 40%;
-    font-size: 15px;
+input  {
+    margin-top: 50px;
+    width: 500px;
+    height: 40px;
+    border: 1px solid lightgray;
     border-radius: 50px;
-    border: 1px solid lightgrey;
-    
+    outline: none;
 }
 
 input[type=search] {
-    padding: 25px 45px;
-    margin: 25px 0;
-    box-sizing: border-box;
-    background-image: url('https://img.icons8.com/windows/32/000000/search.png');
+    padding: 0 50px;
+    background-image: url('https://img.icons8.com/clouds/35/000000/search.png');
     background-repeat: no-repeat;
-    background-position: 10px;
+    background-position: 5px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
 }
 
-input[type=search]:active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
-    box-shadow: 2px 2px 5px lightgrey;
+input:hover {
+    box-shadow: 10px 10px 8px;
 }
 
-.buttons {
-    display: inline-block;
-    text-align: center;
+input:focus {
+    box-shadow: 10px 10px 8px;
 }
 
-#search-btn {
-    background-color: whitesmoke;
+input:active {
+    box-shadow: 10px 10px 8px;
+}
+
+.google-btn {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;  
+}
+
+.google-btn button {
+    margin: 20px;
     border: none;
-    color: dimgrey;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    opacity: 0.6;
-    margin: 4px 2px;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#search-btn:hover {
-    opacity: 1;
-    box-shadow: 2px 2px 5px lightgrey;
-}
-
-#lucky-btn {
+    border-radius: 5px;
+    outline: none;
+    height: 35px;
+    width: 180px;
     background-color: whitesmoke;
-    border: none;
     color: dimgrey;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    opacity: 0.6;
-    margin: 4px 2px;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
 }
 
-#lucky-btn:hover {
-    opacity: 1;
-    box-shadow: 2px 2px 5px lightgrey;
+.google-btn button:hover {
+    box-shadow: 10px 10px 8px;
+    cursor: pointer;
 }
 
 .footer {
-    display: inline-block;
+    position: fixed;
+    width: 100%;
     height: 50px;
-    margin-top: -50px;
+    bottom: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
-.fmenu {
-    display: inline-block;
+.footer ul {
+    margin: 0 1.2em;
+    display: flex;
+    list-style: none;
 }
+
+.footer ul li a {
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration-line: underline;
+}
+
+.footer .left-info li {
+    margin: 0 15px;
+}
+
+.footer .right-info li {
+    margin: 0 15px;
+}
+
+   
+
